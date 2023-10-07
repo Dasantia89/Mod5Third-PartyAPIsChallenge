@@ -56,3 +56,17 @@ function saveSchedule(event) {
     alert('You didn\'t enter anything.');
   }
 }
+
+function getSchedule (){
+  schedule = JSON.parse(localStorage.getItem("schedule")) || [
+    {val: '', hour: 9, amPm : '9AM'},
+    {val: '', hour: 10, amPm : '10AM'},
+    {val: '', hour: 11, amPm : '11AM'},
+    {val: '', hour: 12, amPm : '12AM'},
+    {val: '', hour: 1, amPm : '1PM'},
+    {val: '', hour: 2, amPm : '2PM'},
+    {val: '', hour: 3, amPm : '3PM'},
+    {val: '', hour: 4, amPm : '4PM'},
+    {val: '', hour: 5, amPm : '5PM'}
+  ];
+}
