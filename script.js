@@ -34,6 +34,7 @@ function saveSchedule(event) {
   }
   console.log(schedule);
   localStorage.setItem('schedule',JSON.stringify(schedule));
+  alert('Entry successfully added to the schedule.');
   }
   else{
     alert('You didn\'t enter anything.');
