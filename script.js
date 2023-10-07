@@ -25,14 +25,13 @@ function saveSchedule(event) {
     amPm: $(this).siblings('.hour').text()
   }
 
-  if(entry.val.length >1){
+  if(entry.val.length >=1){
   getSchedule();
   for(var x=0; x<schedule.length; x++){
     if(schedule[x].hour == entry.hour){
       schedule[x].val = entry.val;
     }
   }
-  console.log(schedule);
   localStorage.setItem('schedule',JSON.stringify(schedule));
   alert('Entry successfully added to the schedule.');
   }
